@@ -1,0 +1,28 @@
+
+<ion-navbar *navbar primary>
+  <button menuToggle>
+    <ion-icon name="menu"></ion-icon>
+  </button>
+  <ion-title>Getting Started</ion-title>
+</ion-navbar>
+
+
+<ion-content padding class="getting-started">
+
+  <div class="tutorial-page">
+    <ion-slides pager>
+      <ion-slide *ngFor="#slide of slides">
+        <ion-toolbar>
+          <ion-buttons end>
+            <button>Skip</button>
+          </ion-buttons>
+        </ion-toolbar>
+        <img [src]="slide.image" class="slide-image"/>
+        <h2 class="slide-title" [innerHTML]="slide.title"></h2>
+        <p [innerHTML]="slide.description"></p>
+        <br>
+      </ion-slide>
+    </ion-slides>
+  </div>
+
+</ion-content>
